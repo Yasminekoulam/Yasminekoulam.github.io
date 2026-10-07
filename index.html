@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yasmine Koulam · Portfolio</title>
+  <meta name="description" content="Yasmine Koulam, full-stack developer (Java & Spring Boot). Final-year Computer Science Engineering student at FST Settat, seeking a PFE internship.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=JetBrains+Mono:wght@400;700&family=Red+Hat+Mono:wght@400;500;700&family=Sora:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- boot screen -->
+  <div id="boot" aria-hidden="true">
+    <pre id="boot-log"></pre>
+    <p class="boot-skip">click or press any key to skip</p>
+  </div>
+
+  <!-- top menu bar -->
+  <header class="menubar">
+    <div class="menubar-left">
+      <button id="start-btn" class="brand" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="start-menu">
+        <span class="brand-mark">y</span>
+        <span>yasmine.os</span>
+        <svg class="caret" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <nav class="quick" aria-label="Quick links">
+        <button type="button" data-open="projects">projects</button>
+        <button type="button" data-open="experience">experience</button>
+        <button type="button" data-open="resume">resume</button>
+        <button type="button" data-open="contact">contact</button>
+        <button type="button" data-open="terminal">terminal</button>
+      </nav>
+    </div>
+    <div class="menubar-right">
+      <button class="dev-badge" type="button" data-open="fontlab" title="open fontlab (dev mode)">dev</button>
+      <span class="status"><i></i><span class="status-text">open to a PFE internship</span></span>
+      <time id="clock"></time>
+    </div>
+
+    <div class="start-menu" id="start-menu" hidden></div>
+  </header>
+
+  <!-- desktop -->
+  <main id="desktop">
+    <div class="wallpaper" aria-hidden="true">
+      <h1>PORTFOLIO</h1>
+      <p class="wp-sub">yasmine koulam · full-stack developer</p>
+      <p class="wp-hint"><span class="hint-mouse">double-click an icon to open it</span><span class="hint-touch">tap an icon to open it</span></p>
+    </div>
+
+    <div class="icons icons-left" id="icons-left" role="list" aria-label="Desktop"></div>
+    <div class="icons icons-right" id="icons-right" role="list" aria-label="Desktop files"></div>
+
+    <div id="windows"></div>
+  </main>
+
+  <!-- dock / taskbar -->
+  <footer class="dock">
+    <div class="taskbar" id="taskbar" aria-label="Open windows"></div>
+
+    <nav class="tiles" aria-label="Links">
+      <a class="tile tile-in" href="https://www.linkedin.com/in/yasmine-koulam" target="_blank" rel="noopener" aria-label="LinkedIn" data-label="linkedin">
+        <span class="tile-in-text">in</span>
+      </a>
+      <a class="tile tile-gh" href="https://github.com/YasmineKoulam" target="_blank" rel="noopener" aria-label="GitHub" data-label="github">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+      </a>
+      <a class="tile tile-mail" href="mailto:yasminekoulam2004@gmail.com" aria-label="Email" data-label="email">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M4 7.5l8 6 8-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>
+      </a>
+      <button class="tile tile-term" type="button" data-open="terminal" aria-label="Terminal" data-label="terminal">
+        <span class="tile-term-text">&gt;_</span>
+      </button>
+      <button class="tile tile-cv" type="button" data-open="resume" aria-label="Resume" data-label="resume">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M9 13h6M9 17h4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+      </button>
+    </nav>
+
+    <p class="dock-hint">C:\YASMINE&gt;<span class="cursor">_</span></p>
+  </footer>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <!-- order matters: script.js builds the file tree from functions defined in the first two -->
+  <script src="fontlab.js"></script>
+  <script src="terminal.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
